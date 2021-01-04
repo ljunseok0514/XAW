@@ -1,0 +1,20 @@
+//메인페이지
+.mainbanner{
+  height: 550px;
+  background: url('../img/sport/4.jpg') no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  h1{
+    position:relative;
+    margin-left: 40px;
+    top: 100px;
+    color: white;
+    font-size: 55px;
+  }
+}
+
+.inner{
+  &:nth-child(1){
+    margin-top: 50px;
+  }
+}

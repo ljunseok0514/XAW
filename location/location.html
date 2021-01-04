@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>location</title>
+   <link rel="stylesheet" href="../css/style.css">
+   <script src="../js/jquery.min.js"></script>
+   <script src="../js/common.js"></script>
+    <!--[if lt IE 9]>
+      <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body class="subpage">
+  <div id="wrap">
+   <header id="header">
+     <h1 id="top_logo"><a href="../index.html">XAX</a></h1>
+     <nav id="top_nav">
+       <ul>
+         <li><a href="../company/introduce.html">Company</a>
+           <ul class="sub_menu">
+             <li><a href="../company/introduce.html">Introduce</a></li>
+             <li><a href="../company/ci.html">CI</a></li>
+             <li><a href="../company/history.html">History</a></li>
+           </ul>
+         </li>
+         <li><a href="../product/product.html">Product</a></li>
+         <li><a href="../gallery/gallery.html">Gallery</a></li>
+         <li><a href="../community/notice.html">Community</a>
+           <ul class="sub_menu">
+             <li><a href="../community/notice.html">Notice</a></li>
+             <li><a href="../community/faq.html">FAQ</a></li>
+           </ul>
+         </li>
+         <li><a href="../location/location.html">Location</a></li>
+       </ul>
+     </nav>
+   </header>
+   <main>
+     <!--컨텐츠 영역-->
+     <div class="container">
+       <!--왼쪽메뉴-->
+       <aside id="lnb">
+         <ul>
+           <li><a class="on" href="../location/location.html">location</a></li>
+         </ul>
+       </aside>
+       <!--컨텐츠 본문-->
+       <div class="content">
+         <h2 class="sub_title"><span>Location</span></h2>
+         <div class="inner">
+           <!--map-->
+           <div id="map" style="width: 1000px; height:350px; margin: 50px auto 0;"></div>
+         </div>
+       </div>
+     </div>
+   </main>
+   <footer id="footer">
+     <div class="footer_top">
+       <!-- footer 상단 영역 -->
+       <div class="container">
+         <div class="row">
+           <div class="column footer_logo">
+             <!-- footer logo -->
+             <h3>XAW</h3>
+           </div>
+           <div class="column">
+             <!-- site map -->
+             <h4>site map</h4>
+             <ul>
+               <li><a href="../company/introduce.html">Company</a></li>
+               <li><a href="../product/product.html">Product</a></li>
+               <li><a href="../gallery/gallery.html">Gallery</a></li>
+               <li><a href="../community/notice.html">Community</a></li>
+               <li><a href="location.html">Location</a></li>
+             </ul>
+           </div>
+           <div class="column">
+             <!-- contact us -->
+             <h4>contact us</h4>
+             <p>
+               A108 Adam street <br>
+               New York, NY 535022 <br>
+               United states <br>
+               <strong>phone&nbsp;:</strong><a href="tel:+82-010-0000-0000">+82-010-0000-0000</a><br>
+               <strong>Email&nbsp;:</strong><a href="mailto:dlwnstjr456@naver.com">Jstone@naver.com</a><br>
+             </p>
+           </div>
+           <div class="column product">
+             <!-- news -->
+             <h4>product search</h4>
+             <p>Input product number<br>(consectetur adipisicing elit, sed do eiusmod tempor incididunt ut  dolore magna aliqua.)</p>
+             <form action="">
+               <input id="footerserch" type="search" name="search"><label id="footerserch" for="search">search</label>
+             </form>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="container">
+       <!-- footer 하단 영역 -->
+       <div class="copyright">
+         ⓒcopyright <strong>XAW</strong> .All Rights Reserved
+       </div>
+       <div class="credits">
+         Designed By <a href="mailto:dlwnstjr456@naver.com">Jstone</a>
+       </div>
+     </div>
+   </footer>
+  </div>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=21aa9907a9ef811be40042a90edceda0"></script>
+  <script>
+  var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+      mapOption = {
+          center: new kakao.maps.LatLng(37.54005030624938, 126.92641565922689), // 지도의 중심좌표
+          level: 3 // 지도의 확대 레벨
+      };
+
+  var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+  // 마커가 표시될 위치입니다
+  var markerPosition  = new kakao.maps.LatLng(37.54005030624938, 126.92641565922689);
+
+  // 마커를 생성합니다
+  var marker = new kakao.maps.Marker({
+      position: markerPosition
+  });
+
+  // 마커가 지도 위에 표시되도록 설정합니다
+  marker.setMap(map);
+
+  // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+  // marker.setMap(null);
+  </script>
+</body>
+</html>
